@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Asistente bursátil</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">TU PANEL DE MERCADO</div>
+      <h1>Asistente bursátil</h1>
+      <p class="muted">Análisis técnico diario · Swing trading</p>
+    </div>
+    <button id="notifyBtn" class="outline">Activar avisos</button>
+  </header>
+
+  <main>
+    <section class="notice">
+      <strong>Prototipo de interfaz</strong>
+      <span>Los precios y señales mostrados son ficticios. Aún no hay conexión a cotizaciones reales ni alertas automáticas en segundo plano.</span>
+    </section>
+
+    <section class="market-grid" aria-label="Mercados">
+      <article class="market-card"><span>Dow Jones</span><strong>DJIA</strong><small>EE. UU.</small></article>
+      <article class="market-card"><span>S&amp;P 500</span><strong>SPX</strong><small>EE. UU.</small></article>
+      <article class="market-card"><span>Nasdaq</span><strong>NASDAQ</strong><small>EE. UU.</small></article>
+      <article class="market-card"><span>Mercado Continuo</span><strong>España</strong><small>Mercado español</small></article>
+    </section>
+
+    <section class="section-head">
+      <div><h2>Mejores oportunidades</h2><p class="muted">Ejemplos de cómo se verá la clasificación</p></div>
+      <select id="marketFilter" aria-label="Filtrar mercado">
+        <option value="Todos">Todos los mercados</option>
+        <option value="EE. UU.">Estados Unidos</option>
+        <option value="España">España</option>
+      </select>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead><tr><th>Acción</th><th>Tendencia</th><th>Entrada potencial</th><th>Stop loss</th><th>Objetivo</th><th>Nota</th></tr></thead>
+        <tbody id="opportunities"></tbody>
+      </table>
+    </section>
+
+    <section class="details-grid">
+      <article class="panel">
+        <h2>Reglas de análisis</h2>
+        <ul>
+          <li>Tendencia mediante medias móviles.</li>
+          <li>Soportes y resistencias calculados a partir del histórico.</li>
+          <li>Stop loss basado en volatilidad (ATR) y estructura del precio.</li>
+          <li>Filtro de relación beneficio/riesgo antes de mostrar una señal.</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>Horario de avisos</h2>
+        <p><b>España:</b> 11:00 y 16:00, hora peninsular.</p>
+        <p><b>EE. UU.:</b> 11:00 y 14:00, hora de Nueva York.</p>
+        <p class="muted small">Se comprobará el calendario y el horario real de cada mercado. En este prototipo los avisos no están programados todavía.</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-head compact">
+        <div><h2>Últimas alertas</h2><p class="muted">Aquí aparecerá el historial de avisos reales</p></div>
+        <button id="testBtn">Probar notificación</button>
+      </div>
+      <div id="alertHistory" class="empty">Todavía no hay alertas reales.</div>
+    </section>
+  </main>
+  <footer>Herramienta de análisis informativo. No ejecuta órdenes ni garantiza resultados.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "Asistente bursátil",
+  "short_name": "Bursátil",
+  "description": "Panel móvil de análisis técnico bursátil",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#101827",
+  "lang": "es"
+}
