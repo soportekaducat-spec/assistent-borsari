@@ -1,4 +1,3 @@
-```javascript
 // ASISTENTE BURSÁTIL
 // Preparado para conectar datos reales mediante un servicio seguro.
 // IMPORTANTE: todavía no hay cotizaciones reales conectadas.
@@ -186,5 +185,5 @@ if ("serviceWorker" in navigator &&
       });
   });
 }
-```
+
 
